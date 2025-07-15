@@ -1,0 +1,68 @@
+@use "global" as *;
+
+.image-half {
+  position: absolute;
+  bottom: 0;
+  background-image: url("../images/common/bg_fv1_sp.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  transition: transform 1s ease;
+  transform: translateY(100%);
+
+   &.left {
+      clip-path: inset(0 50% 0 0);
+      z-index: 1;
+    }
+
+    &.right {
+      clip-path: inset(0 0 0 50%);
+      z-index: 2;
+    }
+
+    &.js-slide-out-left {
+        transform: translateY(0);
+        transition-delay: 0s;
+    }
+
+    &.js-slide-out-right {
+        transform: translateY(0);
+        transition-delay: 0.3s;
+    }
+
+  @include mq(md) {
+  position: absolute;
+  bottom:0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/common/bg_fv1_pc.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: translateY(100%);
+  z-index: 10;
+  transition: transform 1s ease;
+
+    &.left {
+      clip-path: inset(0 50% 0 0);
+      z-index: 1;
+    }
+
+    &.right {
+      clip-path: inset(0 0 0 50%);
+      z-index: 2;
+    }
+
+    &.js-slide-out-left {
+      transform: translateY(0);
+      transition-delay: 0s;
+    }
+
+    &.js-slide-out-right {
+        transform: translateY(0);
+        transition-delay: 0.3s;
+    }
+}
+}

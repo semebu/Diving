@@ -1,0 +1,132 @@
+@use "global" as *;
+
+.campaign-card {
+  width: rem(280);
+  background: $white;
+  box-shadow: rem(2) rem(2) rem(10) rem(0) rgba(0, 0, 0, 0.25);
+  // overflow: hidden;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;//親（swiper-slide）の高さに合わせる
+
+  @include mq(md) {
+    width: rem(333);
+  }
+}
+.campaign-card__image img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 280/188;
+    object-fit: cover;
+
+    @include mq(md) {
+      aspect-ratio: 333/223;
+    }
+  }
+
+.campaign-card__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: rem(16) rem(16) rem(16) rem(16);
+
+  @include mq(md) {
+    padding: rem(24) rem(16) rem(40) rem(16);
+  }
+}
+
+.campaign-card__label {
+  display: inline-block;
+  border: 1px solid $green;
+  font-size: rem(12);
+  color: $green;
+  width: fit-content;
+  padding: rem(5) rem(11.5);
+
+  @include mq(md) {
+    padding: rem(7) rem(15.5);
+    // margin-bottom: 8px;
+  }
+}
+
+.campaign-card__title {
+    font-size: rem(16);
+    font-weight: bold;
+    margin-top: rem(6);
+    flex-grow: 1;
+    padding-bottom: rem(5);
+  }
+
+.campaign-card__desc {
+  font-size: rem(14);
+  line-height: 171.429%; /* 171.429% */
+  font-family: $jp-font-family;
+  color: $font-color;
+  border-top: 1px solid $green;
+  text-align: center;
+  padding-top: rem(9);
+
+  @include mq(md) {
+    font-size: rem(16);
+    line-height: 150%; /* 150% */
+    padding-top: rem(16);
+    margin-top: rem(5);
+    padding-right: rem(15);
+  }
+}
+
+.campaign-card__price {
+  display: flex;
+    align-items: baseline;
+    gap: rem(17);
+    justify-content: center;
+
+  @include mq(md) {
+    gap: rem(25);
+  }
+}
+
+.campaign-card__price--old {
+  position: relative;
+  display: inline-block;
+  align-items: center;
+  color: $font-color;
+  font-size: rem(20);
+  line-height: 1;
+  font-family: $eg2-font-family;
+
+   &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        height: rem(3);
+        background-color: #c94800;
+        transform: translateY(-50%);
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      @include mq(md) {
+      font-size: rem(24);
+      width: auto;
+      }
+}
+
+.campaign-card__price--new {
+      font-size: rem(32);
+      font-weight: bold;
+      color: #408f95;
+      font-family: $eg2-font-family;
+
+      @include mq(md) {
+        margin-top: rem(8);
+        font-size: rem(40);
+        font-size: 40px;
+        line-height: 100%; /* 100% */
+      }
+    }
+
+

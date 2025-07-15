@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.test2 {
+  font-family: $eg-font-family;
+  font-weight: $medium;
+  font-size: rem(100);
+  color: $font-color;
+}

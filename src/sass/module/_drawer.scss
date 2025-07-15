@@ -1,0 +1,109 @@
+@use "global" as *;
+
+.drawer {
+  position: fixed;
+  z-index: 101;
+  // z-index: 9999;
+  top:0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100svh;
+  padding-top: rem(80);
+  background-color: $green;
+  overflow-y: scroll;
+  opacity: 0;
+  visibility: hidden;
+  // translate: 101%;
+  // transition: translate 0.5s ease;
+  // transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+  transition:opacity 0.5s ease;
+
+  &.js-show {
+    opacity: 1;
+    visibility: visible;
+
+    .drawer__body {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;//表示時はクリック可能に
+      transition: opacity 0.3s ease;
+    }
+  }
+  &.is-active + .drawer-logo {
+    display: block;
+  }
+}
+
+
+.drawer__body {
+  // opacity: 1;
+  opacity: 0;
+  // visibility: visible;
+  visibility: hidden;
+  display: block;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  max-width: 400px;
+  margin-inline: auto;
+  width: 100%;
+  height: fit-content;
+  padding: rem(24) rem(37);
+  display: flex;
+  flex-direction: row;
+  gap: rem(29);
+}
+
+.drawer__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(40);
+}
+
+.drawer__category {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(24);
+}
+
+.drawer__category-title {
+  color: $white;
+  font-family: $jp-font-family;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: 112.5%; /* 112.5% */
+  position: relative;
+
+     &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: rem(18);
+    height: rem(18);
+    left:rem(-22);
+    top:rem(0);
+    // transform: translateY(-50%);
+    background-image: url(../images/common/deco_starfish.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include mq(md) {
+    // left:rem(5);
+    // top:rem(-1);
+  }
+}
+}
+
+.drawer__sub-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(24);
+}
+
+.drawer__item {
+  color: $white;
+  font-family: $jp-font-family;
+  font-size: rem(16);
+  font-weight: $normal;
+  line-height: 112.5%; /* 112.5% */
+}
+

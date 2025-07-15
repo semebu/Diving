@@ -1,0 +1,237 @@
+@use "global" as *;
+
+.price {
+  margin-top: rem(77);
+  padding: rem(80) rem(0) rem(78);
+  background-color: $light-green;
+
+  @include mq(md) {
+    margin-top: rem(136);
+    padding: rem(98) rem(0);
+  }
+}
+
+.price__inner {
+  padding-inline: rem(15);
+  max-width: rem(600);
+  margin: 0 auto;
+  
+  @include mq(md) {
+    max-width: calc($inner + $padding-pc * 2);//1080+20*2
+    padding-inline: rem(20);
+  }
+
+  // @include mq(md) {
+  //   width: 90%;
+  //   max-width: rem(1078);
+  //   margin: 0 auto;
+  //   text-align: center;
+  // }
+}
+
+.price__title {
+  font-size: rem(16);
+  font-weight: bold;
+  line-height: 150%;
+
+  @include mq(md) {
+    font-size: rem(28);
+    margin-bottom: rem(4);
+  }
+}
+
+.price__sub {
+font-size: rem(14);
+margin-bottom: rem(40);
+}
+
+.price__contents {
+  margin-top: rem(29);
+  display: flex;
+  flex-direction: column-reverse;
+  gap: rem(0);
+
+
+  @include mq(md) {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: rem(93);
+  flex-wrap: wrap; //スマホで折り返し可能に
+  
+  margin-top: rem(40);
+
+  &::after {
+    display: none;
+
+    @include mq(md) {
+      display: block;
+      content: "";
+      position: absolute;
+      background-image: url(../images/common/deco_fish.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: rem(437);
+      height: rem(201);
+      bottom: rem(-175);
+      left: rem(-81);
+    }
+  }
+}
+}
+
+.price__table {
+  display: flex;
+  flex-direction: column;
+  gap: rem(39);
+  width: 100%;
+  margin-top: rem(40);
+
+  @include mq(md) {
+    flex: 1;
+    min-width: rem(300);
+    gap: rem(42);
+    width: calc(rem(492) / rem(1077) * 100%);
+    margin-top: rem(0);
+  }
+}
+
+.price__category {
+
+}
+
+.price__category-title {
+  color: $font-color;
+  font-weight: bold;
+  font-family:$jp-font-family;
+  border-bottom: rem(1) solid $green;
+  margin-bottom: rem(3);
+  font-size: rem(16);
+  text-align: left;
+  padding-bottom: rem(3);
+
+  @include mq(md) {
+    margin-bottom: rem(2);
+    padding-bottom: rem(4);
+    padding-left: rem(7);
+  }
+}
+
+.price__list {
+  margin: 0;
+  padding: 0;
+}
+
+.price__item {
+  display: flex;
+  // flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: rem(3) rem(0) rem(0);
+
+  @include mq(md) {
+    padding: rem(0) rem(0) rem(0) rem(0);
+  }
+}
+
+.price__name {
+margin-top: rem(2);
+font-family: $jp-font-family;
+font-size: rem(14);
+font-weight: $normal;
+line-height: 1.9;
+color: $font-color;
+
+  @include mq(md) {
+  margin-top: rem(5);
+  font-size: rem(16);
+  line-height: 160%;
+  color: $font-color;
+  text-align: left;
+  }
+}
+
+.price__cost {
+  font-size: rem(14);
+  line-height: 150%;
+  color: $font-color;
+  text-align: right;
+  margin-top: rem(2);
+  margin-left: rem(10);
+  font-size: rem(14);
+  font-weight: $normal;
+  line-height: 1.9;
+  color: $font-color;
+  font-family: $jp-font-family;
+
+  @include mq(md) {
+    font-size: rem(16);
+    color: $font-color;
+    margin-top: rem(5.5);
+    font-size: rem(16);
+    line-height: 150%;
+    font-family: $jp-font-family;
+  }
+}
+
+.price__image-wrapper {
+  aspect-ratio: 345/227;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  height: auto;
+
+  @include mq(md) {
+    aspect-ratio: 492/746;
+    width: 45.7%;
+  }
+
+  picture,
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.price__image {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  @include mq(md) {
+    width: 45.7%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+    display: block;
+    object-fit: cover;
+
+    @include mq(md) {
+    }
+    }
+  }
+
+.price__button {
+  margin-top: rem(36);
+  text-align: center;
+
+  @include mq(md) {
+    margin-top: rem(79);
+  }
+
+  a {
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+

@@ -1,0 +1,47 @@
+@use "global" as *;
+
+
+.campaign-swiper-arrows {
+  display: flex;
+  justify-content: space-between;
+  gap: rem(80);
+}
+
+.campaign-swiper-arrows__prev,
+.campaign-swiper-arrows__next {
+  &::after {
+    content: "";
+  }
+}
+.campaign-swiper-arrows__prev {
+  background-image: url(../images/common/button_arrow_prev.png);
+  position: static;
+  width: rem(80);
+  height: rem(80);
+  // background-color: #ffee56;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  border-radius: 50%;
+  transition: background-position 0.3s;
+
+  &:hover {
+    background-position: center left 40%;
+  }
+}
+
+.campaign-swiper-arrows__next {
+  background-image: url(../images/common/button_arrow_next.png);
+ position: static;
+  width: rem(80);
+  height: rem(80);
+  // background-color: #ffee56;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+  border-radius: 50%;
+  transition: background-position 0.3s;
+  &:hover {
+    background-position: center right 40%;
+  }
+}

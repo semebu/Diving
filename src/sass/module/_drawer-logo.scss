@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.drawer-logo {
+  position: fixed;
+  top: rem(21);
+  left: rem(15);
+  // z-index: 102;
+  z-index: 1001;//ドロワーより上に出す（ドロワーのz-indexは101）
+  width: rem(102);
+  display: none;
+
+  @include mq(md) {
+    display: none;
+  }
+
+  &.is-show {
+    display: block;
+  }
+}

@@ -1,0 +1,49 @@
+@use "sass:math";
+
+////////////////////
+// インナー幅設定
+////////////////////
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 1080px; //1440 - 180 - 180
+// ※キャンパス幅ではなくインナーの幅を指す
+
+// 余白
+$padding-pc: 25px;
+$padding-sp: 15px;
+// ※PC時：デザインカンプの余白の幅ではない。PC時は通常25pxで大丈夫！
+
+
+////////////////////
+// フォント設定
+////////////////////
+$eg-font-family: "Gotu", sans-serif;
+$eg2-font-family: "Lato", sans-serif;
+$jp-font-family: "Noto Sans JP", sans-serif;
+$jp2-font-family: "Noto Serif JP", serif;
+// ※検証ツールでしっかり反映されているか確認する
+
+body {
+  font-family: "Gotu", sans-serif;
+}
+
+// フォントウェイト
+$regular: 300;
+$normal: 400;
+$medium: 500;
+$bold: 700;
+
+////////////////////
+// 色の指定
+////////////////////
+
+//色指定（共通性のあるものは出来る限り指定すると良い）
+$black: #000;
+$white: #fff;
+$font-color: #0D2936;
+$green: #408F95;
+$light-blue: #E0EFF0;
+$light-green: #DDF0F1;
+
+////////////////////
+// メディアクエリとブレークポイントの設定
+////////////////////

@@ -1,0 +1,265 @@
+@use "global" as *;
+
+.footer {
+  padding-block: rem(48) rem(56);
+  background: $green;
+
+  @include mq(md) {
+    padding-block: rem(83);
+    margin-top: rem(140);
+  }
+}
+
+.footer__inner {
+  max-width: calc($inner + $padding-pc * 2);//1080+20*2
+  padding-inline: rem(15);
+  margin-inline: auto;
+
+  @include mq(md) {
+    padding-inline: rem(24);
+  }
+}
+
+.footer__icons {
+  display: flex;
+  flex-direction: column;
+  gap: rem(17);
+  align-items: flex-start;
+
+  @include mq(md) {
+    flex-direction: row;
+    gap: rem(41);
+    // margin-left: rem(3);
+  }
+}
+
+.footer__logo {
+  // display: block;
+  width: rem(120);
+
+  @include mq(md) {
+    width: rem(200);
+    height: rem(75);
+  }
+
+  img {
+    // width: rem(200);
+    width: 100%;
+    // object-fit: contain;
+    height: auto;
+  }
+}
+
+.footer__bar {
+  // display: block;
+
+  // @include mq(md) {
+  //   display: none;
+  // }
+}
+
+.footer__sns {
+  display: flex;
+  // flex-direction: row;
+  gap: rem(16);
+  margin-top: auto;
+
+  // @include mq(md) {
+  //   margin-bottom: rem(5);
+  // }
+}
+
+.footer__sns-link {
+  width: rem(24);
+  margin-top: auto;
+
+  @include mq(md) {
+    width: rem(32);
+  }
+
+  img {
+    width: 100%;
+
+  }
+}
+
+.footer__nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: rem(36);
+  margin-top: rem(39);
+
+  // 並び順を調整（SP時：HTML順は 1, 2, 3, 4）
+  .footer__list:nth-of-type(1) { order: 1; } // キャンペーン
+  .footer__list:nth-of-type(2) { order: 3; } // お客様の声 → 本来3番目に出したい
+  .footer__list:nth-of-type(3) { order: 2; } // ダイビング情報 → 本来2番目に出したい
+  .footer__list:nth-of-type(4) { order: 4; } // よくある質問
+
+  @include mq(md) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-right: rem(47);
+    gap: rem(88);
+
+      // PCではHTML順通りでOKなので order は不要
+    .footer__list:nth-of-type(n) { order: initial; }
+  }
+
+   // 並び順を調整（SP時）
+  // .footer__list:nth-of-type(1) { order: 1; }
+  // .footer__list:nth-of-type(3) { order: 2; }
+  // .footer__list:nth-of-type(2) { order: 3; }
+  // .footer__list:nth-of-type(4) { order: 4; }
+}
+
+
+.footer__nav-left-inner {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(md) {
+    // width: 50%;
+    flex-direction: row;
+    gap: rem(36);
+  }
+}
+
+.footer__nav-right-inner {
+  display: flex;
+  flex-direction: column;
+
+   @include mq(md) {
+    // width: 50%;
+    flex-direction: row;
+    gap: rem(7);
+  }
+}
+
+
+
+.footer__list {
+  // width: 100%!important;
+  // width: 100%!important;
+  display: flex;
+  flex-direction: column;
+  gap: rem(34);
+
+  &:nth-of-type(3) {
+    margin-left: rem(9);
+    gap: rem(40);
+  }
+  &:nth-of-type(4) {
+    margin-left: rem(9);
+    gap: rem(43);
+  }
+
+  @include mq(md) {
+    // width: 50%;
+  }
+}
+
+.footer__category {
+  // display: block;
+  display: flex;
+  flex-direction: column;
+  gap: rem(22);
+}
+
+.footer__category-title {
+  color: $white;
+  font-family: $jp-font-family;
+  font-size: rem(16);
+  font-style: normal;
+  font-weight: $bold;
+  // line-height: rem(18);
+  line-height: 1;
+  text-align: left;
+  // padding-left: rem(18);
+  padding-left: rem(24);
+  // margin-top: 0;
+  // padding-top: 0;
+  position: relative;
+
+   &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: rem(18);
+    height: rem(18);
+    left:rem(0);
+    top:rem(0);
+    // transform: translateY(-50%);
+    background-image: url(../images/common/deco_starfish.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include mq(md) {
+    // left:rem(5);
+    // top:rem(-1);
+  }
+}
+
+  a {
+    // display: block;
+    // padding-left: rem(21);
+    color: $white;
+    text-decoration: none;
+
+    @include mq(md) {
+      // padding-left: rem(27);
+    }
+  }
+}
+
+
+.footer__br {
+padding-left: rem(22);
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.footer__sub-list {
+  display: flex;
+  flex-direction: column;
+  // gap: rem(24);
+  gap: rem(16);
+}
+
+.footer__item {
+  a {
+    margin-left: rem(24);
+    // display: block;
+    color: $white;
+    font-family: $jp-font-family;
+    font-size: rem(16);
+    text-decoration: none;
+    // font-style: normal;
+    // font-weight: $normal;
+    // line-height: 112.5%; /* 112.5% */
+    // padding-left: rem(calc(18 + 4));
+
+    @include mq(md) {
+      // padding-left: rem(27);
+    }
+  }
+}
+
+.footer__copy {
+  margin-top: rem(39);
+  text-align: center;
+  color: $white;
+  font-family: $eg-font-family;
+  font-size: rem(12);
+  letter-spacing: 0.08em;
+  // font-weight: $normal;
+  // line-height: 150%;
+
+  @include mq(md) {
+  margin-top: rem(73);
+  font-size: rem(14);
+  // line-height: 128.571%;
+   letter-spacing: 0.09em;
+  }
+}

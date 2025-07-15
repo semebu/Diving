@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.campaign-swiper {
+ padding-bottom: rem(10);
+}
+
+.campaign-swiper__slide {
+  height: auto;
+  width: rem(280);
+  flex-shrink: 0;
+
+  @include mq(md) {
+    width: rem(333);
+  }
+}

@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.swiper-wrapper {
+  box-sizing: border-box;
+  max-width: 100%;
+  align-items: stretch;
+  display: flex;
+}
+

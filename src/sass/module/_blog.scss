@@ -1,0 +1,70 @@
+@use "../global" as *;
+
+.blog {
+  padding-top: rem(80);
+
+  @include mq(md) {
+    position: relative;
+    padding-top: rem(100);
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: rem(500);
+      background-image: url(../images/common/bg_blog.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+}
+
+.blog__decoration {
+  display: none;
+
+  @include mq(md) {
+    display: block;
+    position: absolute;
+    top: rem(24);
+    left: rem(-64);
+    width: rem(437);
+  }
+}
+
+.blog__cards {
+  margin-top: rem(28);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(40);
+  flex-wrap: wrap;
+  justify-content: flex-start;//左詰めにする
+
+  @include mq(md) {
+    margin-top: rem(81);
+    margin-inline: auto;
+    flex-direction: row;
+    gap: rem(40);
+    max-width: rem(1080);
+    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+.blog__button {
+  margin-top: rem(40);
+  text-align: center;
+
+  @include mq(md) {
+    margin-top: rem(81);
+  }
+}
+
+
+

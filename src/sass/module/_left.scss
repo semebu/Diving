@@ -1,0 +1,6 @@
+@use "global" as *;
+
+.left {
+  clip-path: inset(0 50% 0 0); /* 左半分を表示 */
+  z-index: 1;
+} 

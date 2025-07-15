@@ -1,0 +1,178 @@
+@use "global" as *;
+
+#campaign::before {
+  content: "";
+  display: block;
+  height: 90px;
+  margin-top: -90px;
+
+  @include mq(md) {
+    height: 80px;
+    margin-top: -80px;
+  }
+}
+
+.campaign {
+  background-color: $white;
+  position: relative;
+  margin-top: rem(40);
+  // padding-left: rem(0);
+  overflow: visible;
+
+  @include mq(md) {
+    margin-top: 120px;
+    // padding-left: rem(15);
+  }
+}
+
+// .campaign__inner {
+//   max-width: calc($inner + $padding-pc * 2);//1080+20*2
+//   padding-inline: rem(0);
+//   margin: 0 auto;
+//   overflow: visible;
+
+//   @include mq(md) {
+//     padding-inline: rem(20);
+//   }
+// }
+
+.campaign__outer {
+  position: relative;
+
+  @include mq(md) {
+  }
+}
+
+.campaign__slider__wrapper {
+  // position: absolute;
+  // top: rem(-96);
+  // right: rem(160);
+  // max-width: rem(1080);
+  // padding-left: rem(20);
+  // padding-right: rem(20);
+  // padding-left: max(30px, 50vw - 512px);
+  // margin-inline: auto;
+  // margin-bottom: rem(24);
+  
+
+  width: 100vw;
+  // margin-left: calc(50% - 50vw);//左はしを画面に揃える
+  // padding-left: max(20px, 50vw - 512px);
+  overflow: visible;
+}
+
+.campaign__top {
+  overflow: hidden;
+  margin-right: calc(50% - 50vw);
+  padding-top: rem(38);
+
+  @include mq(md) {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-top: rem(40);
+    display: flex;
+    column-gap: 32px;
+    padding-top: rem(0);
+  }
+}
+
+.campaign__slider {
+  width:100%;
+  margin-top: rem(28);
+  margin-left: calc(50% - 50vw); // ← 親の「inner」幅をはみ出す
+  padding-inline: 20px; // オプション：はみ出した部分に余白追加
+  width: 100vw;
+
+
+  @include mq(lg) {
+    margin-top: 0;
+  }
+}
+
+.campaign__arrow__wrapper {
+  @include mq(md) {
+    position: absolute;
+    top: rem(-93);
+    right: rem(0);
+  }
+}
+
+.campaign__arrows {
+  position: relative;
+  z-index: 2;
+  max-width: 240px;
+  margin-top: -10px;
+  // margin-right: auto;
+  margin-left: auto;
+}
+
+.campaign__bottom {
+  margin-top: rem(29);
+  margin-right: auto;
+  margin-left: auto;
+
+  @include mq(md) {
+    display: flex;
+    gap: rem(30);
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    margin-top: rem(40);
+  }
+}
+
+.campaign__decoration-english {
+  display: block;
+  width: 255px;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1;
+
+  @include mq(lg) {
+    width: 360px;
+    margin-top: -45px;
+  }
+
+  @include mq(xl) {
+    width: 495px;
+    margin: 0;
+  }
+}
+
+.campaign__text-wrap {
+  margin-top: 15px;
+
+  @include mq(xl) {
+    margin-top: 0;
+  }
+}
+
+.campaign__text {
+  font-size: 11.444px;
+  color: #fff;
+  text-align: center;
+
+  @include mq(sm) {
+    font-size: 14px;
+  }
+
+  @include mq(xl) {
+    font-size: 16px;
+    text-align: right;
+  }
+}
+
+.campaign__button {
+   margin-top: rem(29);
+   text-align: center;
+
+  @include mq(md) {
+    margin-top: rem(70);
+  }
+}
+
+
+
+
+
+

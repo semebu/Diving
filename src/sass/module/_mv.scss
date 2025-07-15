@@ -1,0 +1,77 @@
+@use "global" as *;
+
+.mv {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  @include mq(md) {
+    height: 100vh;
+  }
+}
+
+.mv__inner {
+
+}
+
+.mv__swiper-container {
+
+}
+
+.mv__swiper {
+
+}
+
+.mv__swiper-wrapper {
+
+}
+
+.mv__swiper-slide {
+  height: 100vh;
+position: relative;//テキストを絶対配置値できるようにする
+}
+
+.mv__text {
+position: absolute;
+top: 49%;
+left: 50%;
+transform: translate(-50%, -50%);
+color: $white;
+text-align: center;
+
+@include mq(md) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+}
+
+.mv__maintext {
+  font-size: rem(40);
+  text-indent: .54em;
+  letter-spacing: .54em;
+  font-family: $eg2-font-family;
+  font-weight: $normal;
+  
+  @include mq(md) {
+    // padding-left: rem(39);
+    font-size: rem(80);
+    // text-indent: .54em;
+  }
+}
+
+.mv__subtext {
+  margin-top: rem(-3);
+  font-size: rem(20);
+  font-weight: $normal;
+  color: $white;
+  font-family: $eg-font-family;
+  
+  @include mq(md) {
+    margin-top: rem(-9);
+    font-size: rem(20);
+    // letter-spacing: rem(1.2);
+  }
+}
+

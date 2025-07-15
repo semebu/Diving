@@ -1,0 +1,12 @@
+{
+  "name": "diving",
+  "version": "1.0.0",
+  "description": "- htmlによるコーディング - src内の情報は静的ページ（dist）に反映される",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

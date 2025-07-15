@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.swiper-slide {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  box-sizing: border-box;
+  max-width: 100%;
+  width: rem(280);
+  display: flex;
+  flex-shrink: 0;
+
+  @include mq(md) {
+    width: rem(333);
+  }
+}
