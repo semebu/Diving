@@ -112,7 +112,7 @@
   }
 }
 
-.header__nav-item__en {
+.header__nav-item--en {
   font-family: $eg-font-family;
   font-size: rem(18);
   line-height: 100%;
@@ -120,7 +120,7 @@
   display: block;
 }
 
-.header__nav-item__jp {
+.header__nav-item--jp {
   font-family: $jp-font-family;
   font-size: rem(10);
   font-weight: 400;
