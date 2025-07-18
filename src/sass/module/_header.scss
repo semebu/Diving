@@ -37,7 +37,9 @@
   height: 100%;//ヘッダーと同じ高さに
   display: flex;
   align-items: center;
-  
+  position: relative;
+  z-index: 999;
+
   a {
     max-width: rem(133);
     display: block;

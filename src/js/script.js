@@ -311,8 +311,8 @@ const campaignSwiper = new Swiper(".campaign-swiper", {
   keyboard: true,
 
   navigation: {
-    nextEl: "#js-campaign-next",
-    prevEl: "#js-campaign-prev",
+    nextEl: ".campaign-next",
+    prevEl: ".campaign-prev",
   },
   breakpoints: {
     768: {

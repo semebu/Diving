@@ -104,26 +104,89 @@
       </ul>
     </nav>
   </div>
+  <!-- ドロワーアイコン -->
+  <button class="drawer-icon">
+  <span class="drawer-icon__bar"></span>
+  <span class="drawer-icon__bar"></span>
+  <span class="drawer-icon__bar"></span>
+  </button>
+
+  <!-- ドロワーメニュー -->
+  <div class="drawer">
+    <div class="drawer__body">
+      <!-- 左カラム -->
+      <ul class="drawer__list">
+        <li class="drawer__category">
+          <p class="drawer__category-title"><a href="#campaign">キャンペーン</a></p>
+          <ul class="drawer__sub-list">
+            <li class="drawer__item"><a href="#">ライセンス取得</a></li>
+            <li class="drawer__item"><a href="#">貸切体験ダイビング</a></li>
+            <li class="drawer__item"><a href="#">ナイトダイビング</a></li>
+          </ul>
+        </li>
+        <li class="drawer__category">
+          <p class="drawer__category-title"><a href="#about">私たちについて</a></p>
+        </li>
+        <li class="drawer__category">
+          <p class="drawer__category-title"><a href="#information">ダイビング情報</a></p>
+          <ul class="drawer__sub-list">
+            <li class="drawer__item"><a href="#">ライセンス講習</a></li>
+            <li class="drawer__item"><a href="#">体験ダイビング</a></li>
+            <li class="drawer__item"><a href="#">ファンダイビング</a></li>
+          </ul>
+        </li>
+        <li class="drawer__category">
+          <p class="drawer__category-title">ブログ</p>
+        </li>
+      </ul>
+      <!-- 右カラム -->
+      <ul class="drawer__list">
+        <li class="drawer__category">
+          <p class="drawer__category-title"><a href="#voice">お客様の声</a></p>
+        </li>
+        <li class="drawer__category">
+          <p class="drawer__category-title"><a href="#price">料金一覧</a></p>
+          <ul class="drawer__sub-list">
+            <li class="drawer__item"><a href="#">ライセンス講習</a></li>
+            <li class="drawer__item"><a href="#">体験ダイビング</a></li>
+            <li class="drawer__item"><a href="#">ファンダイビング</a></li>
+          </ul>
+        </li>
+        <li class="drawer__category">
+          <p class="drawer__category-title"><a href="#faq">よくある質問</a></p>
+        </li>
+        <li class="drawer__category">
+          <p class="drawer__category-title"><a href="#">プライバシー<br>ポリシー</a></p>
+        </li>
+        <li class="drawer__category">
+          <p class="drawer__category-title"><a href="#">利用規約</a></p>
+        </li>
+        <li class="drawer__category">
+          <p class="drawer__category-title"><a href="#contact">お問合せ</a></p>
+        </li>
+      </ul>
+    </div>
+  </div>
 </header>
 
 <!-- ドロワー時のロゴ -->
-<h1 class="drawer-logo">
+<!-- <h1 class="drawer-logo">
   <a href="index.html">
     <img src="./assets/images/common/logo_codeups.svg" alt="CodeUpsのロゴ">
   </a>
-</h1>
+</h1> -->
 <!-- ドロワーアイコン -->
-<button class="drawer-icon">
+<!-- <button class="drawer-icon">
   <span class="drawer-icon__bar"></span>
   <span class="drawer-icon__bar"></span>
   <span class="drawer-icon__bar"></span>
-</button>
+</button> -->
 
 <!-- ドロワーメニュー -->
-<div class="drawer">
-  <div class="drawer__body">
+<!-- <div class="drawer">
+  <div class="drawer__body"> -->
     <!-- 左カラム -->
-    <ul class="drawer__list">
+    <!-- <ul class="drawer__list">
       <li class="drawer__category">
         <p class="drawer__category-title"><a href="#campaign">キャンペーン</a></p>
         <ul class="drawer__sub-list">
@@ -146,10 +209,10 @@
       <li class="drawer__category">
         <p class="drawer__category-title">ブログ</p>
       </li>
-    </ul>
+    </ul> -->
     <!-- 右カラム -->
-     <ul class="drawer__list">
-       <li class="drawer__category">
+     <!-- <ul class="drawer__list">
+      <li class="drawer__category">
         <p class="drawer__category-title"><a href="#voice">お客様の声</a></p>
       </li>
       <li class="drawer__category">
@@ -174,7 +237,7 @@
       </li>
      </ul>
   </div>
-</div>
+</div> -->
 
 <!-- ファーストビュー -->
  <div class="mv">
@@ -252,18 +315,15 @@
 <section class="campaign">
   <div class="inner">
     <div class="section-title">
-      <!-- <h2 class="section-title__en">
-        <span class="section-title__en--accent">C</span>ampaign
-      </h2> -->
-      <h2 class="section-title__en">Campaign</h2>
-      <p class="section-title__jp">キャンペーン</p>
+      <p class="section-title__en">Campaign</p>
+      <h2 class="section-title__jp">キャンペーン</h2>
     </div>
     <div class="campaign__outer">
-      <div class="campaign__arrow__wrapper">
+      <div class="campaign__arrow-wrapper">
         <div class="campaign__arrows hidden-sp">
           <div class="campaign-swiper-arrows">
-            <div id="js-campaign-prev" class="swiper-button-prev campaign-swiper-arrows__prev"></div>
-            <div id="js-campaign-next" class="swiper-button-next campaign-swiper-arrows__next"></div>
+            <div class="campaign-prev swiper-button-prev campaign-swiper-arrows__prev"></div>
+            <div class="campaign-next swiper-button-next campaign-swiper-arrows__next"></div>
           </div>
         </div>
       </div>
@@ -428,8 +488,8 @@
 <section class="about">
 <div class="inner">
     <div class="section-title">
-      <h2 class="section-title__en">About us</h2>
-      <p class="section-title__jp">私たちについて</p>
+      <p class="section-title__en">About us</p>
+      <h2 class="section-title__jp">私たちについて</h2>
     </div>
   <div class="about__content">
     <div class="about__images">
@@ -475,8 +535,8 @@
 <section class="information">
       <div class="inner">
         <div class="section-title">
-        <h2 class="section-title__en">Information</h2>
-        <p class="section-title__jp">ダイビング情報</p>
+        <p class="section-title__en">Information</p>
+        <h2 class="section-title__jp">ダイビング情報</h2>
       </div>
       <div class="information__content">
         <div class="information__image">
@@ -509,7 +569,7 @@
     <div class="inner">
       <div class="section-title">
         <h2 class="section-title__en section-title__en--white">Blog</h2>
-        <p class="section-title__jp section-title__jp--white">ブログ</p>
+        <h2 class="section-title__jp section-title__jp--white">ブログ</h2>
       </div>
       <div class="blog__decoration">
         <img src="./assets/images/common/deco_fish_white.svg" alt="魚5匹のイラスト">
@@ -615,8 +675,8 @@
 <section class="voice">
   <div class="inner">
       <div class="section-title">
-        <h2 class="section-title__en">Voice</h2>
-        <p class="section-title__jp">お客様の声</p>
+        <p class="section-title__en">Voice</p>
+        <h2 class="section-title__jp">お客様の声</h2>
       </div>
     <div class="voice__items">
       <!-- ボイスカード１枚目 -->
@@ -725,8 +785,8 @@
 <section class="price">
     <div class="inner">
       <div class="section-title">
-        <h2 class="section-title__en">Price</h2>
-        <p class="section-title__jp">料金一覧</p>
+        <p class="section-title__en">Price</p>
+        <h2 class="section-title__jp">料金一覧</h2>
       </div>
       <div class="price__contents">
         <div class="price__table">
@@ -856,7 +916,7 @@
     <div class="contact_form-title">
       <div class="section-title">
         <h2 class="section-title__en section-title__en--contact">Contact</h2>
-        <p class="section-title__jp section-title__jp--contact">お問い合わせ</p>
+        <h2 class="section-title__jp section-title__jp--contact">お問い合わせ</h2>
       </div>
     </div>
     <p class="contact__form-text">ご予約・お問い合わせはコチラ</p>

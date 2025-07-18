@@ -44,25 +44,25 @@ font-size: rem(40);
   }
 }
 
-.section-title__en--accent {
-color: $green;
-font-family: $eg-font-family;
-font-size: rem(32);
-font-weight: $normal;
-line-height: rem(40);
+// .section-title__en--accent {
+// color: $green;
+// font-family: $eg-font-family;
+// font-size: rem(32);
+// font-weight: $normal;
+// line-height: rem(40);
 
-@include mq(md) {
-font-size: rem(40);
-}
-}
+// @include mq(md) {
+// font-size: rem(40);
+// }
+// }
 
-.section-title__en--accent--white {
-  color: $green;
+// .section-title__en--accent--white {
+//   color: $green;
 
-  @include mq(md) {
-    color: $white;
-  }
-}
+//   @include mq(md) {
+//     color: $white;
+//   }
+// }
 
 .section-title__jp {
 color: $green;

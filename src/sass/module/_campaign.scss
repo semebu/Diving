@@ -89,7 +89,7 @@
   }
 }
 
-.campaign__arrow__wrapper {
+.campaign__arrow-wrapper {
   @include mq(md) {
     position: absolute;
     top: rem(-93);
