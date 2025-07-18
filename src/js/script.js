@@ -23,9 +23,9 @@ jQuery('a[href^="#"]').on("click",function(e) {
   // ============================
   window.addEventListener("load", () => {
     const loadingScreen = document.getElementById("loading");
-    const leftImage = document.querySelector(".image-half.left");
-    const rightImage = document.querySelector(".image-half.right");
-    const heading = document.querySelector(".heading");
+    const leftImage = document.querySelector(".loading__image.image-left");
+    const rightImage = document.querySelector(".loading__image.image-right");
+    const heading = document.querySelector(".loading__heading");
 
     if (loadingScreen) loadingScreen.style.display = "block";
 
