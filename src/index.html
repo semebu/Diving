@@ -172,7 +172,7 @@
 </header>
 
 <!-- ファーストビュー -->
- <div class="mv">
+<div class="mv">
   <div class="mv__inner">
     <div class="mv__swiper-container">
       <div class="mv__swiper swiper-container">
@@ -220,36 +220,37 @@
         </div>
       </div>
       <!-- ここにまとめて１回だけ書く -->
-            <div class="mv__text">
-              <h2 class="mv__maintext">DIVING</h2>
-              <p class="mv__subtext">into the ocean</p>
-            </div>
+      <div class="mv__text">
+        <h2 class="mv__maintext">DIVING</h2>
+        <p class="mv__subtext">into the ocean</p>
+      </div>
     </div>
   </div>
 </div>
 
  <!-- キャンペーンセクション -->
 <section class="campaign">
-  <div class="inner">
-    <div class="section-title">
+  <div class="campaign__inner inner">
+    <div class="campaign__title section-title">
       <p class="section-title__en">Campaign</p>
       <h2 class="section-title__jp">キャンペーン</h2>
     </div>
     <div class="campaign__outer">
       <div class="campaign__arrow-wrapper">
-        <div class="campaign__arrows hidden-sp">
-          <div class="campaign-swiper-arrows">
-            <div class="campaign-prev swiper-button-prev campaign-swiper-arrows__prev"></div>
-            <div class="campaign-next swiper-button-next campaign-swiper-arrows__next"></div>
-          </div>
+        <!-- <div class="campaign__arrows hidden-sp"> -->
+        <div class="campaign__arrows campaign-swiper-arrows hidden-sp">
+          <!-- <div class="campaign-swiper-arrows"> -->
+            <div class="campaign-swiper-arrows__prev campaign-prev swiper-button-prev"></div>
+            <div class="campaign-swiper-arrows__next campaign-next swiper-button-next"></div>
+          <!-- </div> -->
         </div>
       </div>
       <div class="campaign__top">
-        <div class="campaign__slider__wrapper">
-          <div id="js-campaign-swiper" class="swiper campaign-swiper swiper-initialized swiper-horizontal">
-            <div class="swiper-wrapper campaign-swiper__wrapper" id="js-campaign-swiper-wrap">
+        <div class="campaign__slider-wrapper">
+          <div id="js-campaign-swiper" class="campaign__swiper campaign-swiper swiper-initialized swiper-horizontal">
+            <div class="campaign-swiper__wrapper swiper-wrapper" id="js-campaign-swiper-wrap">
 
-              <div class="swiper-slide campaign-swiper__slide">
+              <div class="campaign-swiper__slide swiper-slide">
                 <div class="campaign-card">
                   <div class="campaign-card__image">
                   <img src="./assets/images/common/img_campaign1.jpg" alt="魚の群れ"/>
@@ -475,7 +476,6 @@
             </a>
             </div>
           </div>
-          
         </div>
       </div>
     </div>
