@@ -42,7 +42,7 @@ justify-content: flex-start;
 
 .blog-card__date {
   color: $font-color;
-  font-family: $eg2-font-family;
+  font-family: $gotu-font-family;
   font-size: rem(12);
   font-weight: 400;
   line-height: 150%; /* 150% */
@@ -52,7 +52,7 @@ justify-content: flex-start;
 
 .blog-card__title {
   color: $font-color;
-  font-family: $jp-font-family;
+  font-family: $noto-sans-font-family;
   font-size: rem(16);
   font-weight: 500;
   line-height: 150%; /* 150% */
@@ -63,7 +63,7 @@ justify-content: flex-start;
 .blog-card__text {
   margin-top: rem(16);
   color: $black;
-  font-family: $jp-font-family;
+  font-family: $noto-sans-font-family;
   font-size: rem(16);
   font-weight: 400;
   line-height: 150%; /* 150% */

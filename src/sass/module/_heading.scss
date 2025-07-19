@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  color: $green;
+  z-index: 200;
+  opacity: 1;
+  transition: opacity 1s ease 1.2s color 1s ease 1.2s;
+
+  &.show {
+    opacity: 1;
+    color: $white;
+    transition-delay: 1.2s;
+  }
+}
+
+.heading__main {
+  font-size: rem(80);
+  line-height: 125%;
+  font-weight: $normal;
+  font-family: $lato-font-family;
+  font-weight: 400;
+  letter-spacing: rem(43.2);
+
+  @include mq(md) {
+  }
+}
+
+.heading__sub {
+  color:$white;
+  font-family: $gotu-font-family;
+  font-size: rem(20);
+  font-weight: 400;
+}

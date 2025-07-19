@@ -106,7 +106,7 @@ margin-bottom: rem(40);
 .price__category-title {
   color: $font-color;
   font-weight: bold;
-  font-family:$jp-font-family;
+  font-family:$noto-sans-font-family;
   border-bottom: rem(1) solid $green;
   margin-bottom: rem(3);
   font-size: rem(16);
@@ -139,7 +139,7 @@ margin-bottom: rem(40);
 
 .price__name {
 margin-top: rem(2);
-font-family: $jp-font-family;
+font-family: $noto-sans-font-family;
 font-size: rem(14);
 font-weight: $normal;
 line-height: 1.9;
@@ -165,7 +165,7 @@ color: $font-color;
   font-weight: $normal;
   line-height: 1.9;
   color: $font-color;
-  font-family: $jp-font-family;
+  font-family: $noto-sans-font-family;
 
   @include mq(md) {
     font-size: rem(16);
@@ -173,7 +173,7 @@ color: $font-color;
     margin-top: rem(5.5);
     font-size: rem(16);
     line-height: 150%;
-    font-family: $jp-font-family;
+    font-family: $noto-sans-font-family;
   }
 }
 
