@@ -234,39 +234,6 @@ box.each(function() {
 });
 });
 
-
-// $(window).on('load', function () {
-//   $('.colorbox').each(function () {
-//     var box = $(this),
-//         color = box.find('.color'),
-//         image = box.find('img');
-
-//     color.css({ left: '100%', width: '100%' });
-//     image.css('opacity', '0');
-
-//     color.animate({ left: '0%' }, 700, function () {
-//       image.css('opacity', '1');
-//       color.animate({ width: '0%' }, 700);
-//     });
-//   });
-// });
-
-
-// });
-
-//  $(function () {
-//     $('.colorbox').each(function () {
-//       const box = $(this);
-//       const color = box.find('.color');
-
-//       // アニメーション後にクラスを追加してimg表示
-//       color.on('animationend', function () {
-//         box.addClass('is-visible');
-//       });
-//     });
-//   });
-
-
   // ============================
   // ✅ ファーストビュースワイパー
   // ============================
