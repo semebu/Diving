@@ -32,21 +32,25 @@
   }
 }
 
+//↓外枠のみ残し、ブロックとして使い回しできるものは.voice-cardsクラスを作ってそちらに移動して別で管理する。
 .voice__cards {
   margin-top: rem(44);
-  display: flex;
-  flex-direction: column;
-  gap: rem(40);
-  align-items: center;
-  justify-content: space-between;
+  // ↓以下の指定はブロックとして使い回しできるよう.voice-cardsクラスで管理。
+  // display: flex;
+  // flex-direction: column;
+  // gap: rem(40);
+  // align-items: center;
+  // justify-content: space-between;
 
   @include mq(md) {
     margin-top: rem(29);
-    flex-direction: row;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    // ↓以下の指定はブロックとして使い回しできるよう.voice-cardsクラスで管理。
+    // flex-direction: row;
+    // display: grid;
+    // grid-template-columns: repeat(2,1fr);
   }
 }
+
 .voice__decoration--top {
   display: none;
 
