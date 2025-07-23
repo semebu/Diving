@@ -83,19 +83,22 @@ margin-bottom: rem(40);
 }
 }
 
+//共通パーツとして使いまわせるものはprice-tableクラスでブロックして管理。外の余白はこちらで管理する。
 .price__table {
-  display: flex;
-  flex-direction: column;
-  gap: rem(39);
-  width: 100%;
   margin-top: rem(40);
+  // 以下は.price-tableクラスでブロックとして管理する。
+  // display: flex;
+  // flex-direction: column;
+  // gap: rem(39);
+  // width: 100%;
 
   @include mq(md) {
-    flex: 1;
-    min-width: rem(300);
-    gap: rem(42);
-    width: calc(rem(492) / rem(1077) * 100%);
     margin-top: rem(0);
+    // 以下は.price-tableクラスでブロックとして管理する。
+    // flex: 1;
+    // min-width: rem(300);
+    // gap: rem(42);
+    // width: calc(rem(492) / rem(1077) * 100%);
   }
 }
 
