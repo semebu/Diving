@@ -1,17 +1,5 @@
 @use "global" as *;
 
-#contact::before {
-  content: "";
-  display: block;
-  height: 90px;
-  margin-top: -90px;
-
-  @include mq(md) {
-    height: 80px;
-    margin-top: -80px;
-  }
-}
-
 .contact {
   margin-top: rem(0);
   position: relative;

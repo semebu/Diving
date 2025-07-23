@@ -1,17 +1,5 @@
 @use "global" as *;
 
-#campaign::before {
-  content: "";
-  display: block;
-  height: 90px;
-  margin-top: -90px;
-
-  @include mq(md) {
-    height: 80px;
-    margin-top: -80px;
-  }
-}
-
 .campaign {
   background-color: $white;
   position: relative;
